@@ -67,7 +67,7 @@ class CNN(object):
 
 if __name__ == '__main__':
     input_shape = (32, 32, 3)
-    (X_train, y_train), (X_test, y_test) = mnist.load_data("../test_data_home")
+    (X_train, y_train), (X_test, y_test) = mnist.load_data()
     X_train, y_train = X_train[:1000], y_train[:1000]  # 训练集1000条
     X_test, y_test = X_test[:100], y_test[:100]  # 测试集100条
     X_train = [cv2.cvtColor(cv2.resize(i, (input_shape[1], input_shape[0])), cv2.COLOR_GRAY2RGB)
